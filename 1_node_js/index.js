@@ -1,4 +1,17 @@
 var Twitter = require('twitter');
+
+/**
+ * credentials.js should just look like
+ * 
+ * module.exports = {
+ *  consumer_key: "...",
+ *  consumer_secret: "...",
+ *  access_token_key: "...",
+ *  access_token_secret: "..."
+ * };
+ * 
+ * /
+
 var credentials = require('./credentials');
 
 var client = new Twitter(credentials);
