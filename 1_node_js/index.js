@@ -35,6 +35,6 @@ function searchAndTweet(succeed, fail) {
   });
 }
 
-setTimeout(function() {
+setInterval(function() {
   searchAndTweet(console.log, console.log);
 }, 5 * 60 * 1000);

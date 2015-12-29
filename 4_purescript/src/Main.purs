@@ -25,10 +25,9 @@ findAndRetweet options rgx client = search client options retweetMatches
       Just pattern -> Regex.test pattern tweet.text
       Nothing -> true
 
-streamAndLog :: TwitterClient -> Eff (console :: CONSOLE, twitter :: TWITTER) Unit
-streamAndLog client = stream client options logTweet logError
+streamAndLog :: StreamOptions -> TwitterClient -> Eff (console :: CONSOLE, twitter :: TWITTER) Unit
+streamAndLog options client = stream client options logTweet logError
   where
-    options = streamOptions "trump"
     logTweet tweet = log ("(" ++ tweet.id ++ ") " ++ tweet.user ++ ": " ++ tweet.text)
     logError = log
 
@@ -39,3 +38,5 @@ main = twitterClient myCredentials >>= (findAndRetweet options rgx)
     options = searchOptions query
     rgx = Just $ Regex.regex "make (.*) great again" flags
     flags = Regex.noFlags { ignoreCase = true }
+
+--main = twitterClient myCredentials >>= streamAndLog (streamOptions "trump")
