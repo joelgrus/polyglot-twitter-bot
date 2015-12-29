@@ -1,0 +1,14 @@
+{
+  "name": "make-great-again",
+  "version": "0.0.0",
+  "description": "make twitter great again",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joelgrus@gmail.com",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "twitter": "~1.2.5"
+  }
+}
