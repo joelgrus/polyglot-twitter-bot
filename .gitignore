@@ -31,3 +31,13 @@ bower_components
 credentials.js
 credentials.json
 MyCredentials.purs
+
+# output
+output/
+
+# python libraries
+oauthlib
+requests
+requests_oauthlib
+twython
+*.dist-info

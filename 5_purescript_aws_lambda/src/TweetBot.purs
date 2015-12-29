@@ -10,7 +10,7 @@ import qualified Data.String.Regex as Regex
 import MyCredentials
 import AWS.Lambda.Context
 import Twitter
-import Twitter.Search2
+import Twitter.Search
 import Twitter.Retweet
 import Twitter.Streaming
 
