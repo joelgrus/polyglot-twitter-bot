@@ -30,4 +30,4 @@ bower_components
 # credentials
 credentials.js
 credentials.json
-Credentials.purs
+MyCredentials.purs
