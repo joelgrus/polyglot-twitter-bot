@@ -3,7 +3,6 @@
 module Twitter.Search where
 
 import Prelude (Unit())
-import Data.Foreign (Foreign())
 import Data.Function
 import Control.Monad.Eff (Eff())
 
@@ -30,4 +29,4 @@ search :: forall eff. TwitterClient ->
                       SearchOptions ->
                       (Tweets -> Eff (twitter :: TWITTER | eff) Unit) ->
                       (Eff (twitter :: TWITTER | eff) Unit)
-search = runFn3 searchImpl
+search client options callback = runFn3 searchImpl client options callback

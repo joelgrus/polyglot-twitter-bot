@@ -3,7 +3,6 @@
 module Twitter.Retweet (retweet) where
 
 import Prelude (Unit())
-import Data.Foreign (Foreign())
 import Data.Function
 import Control.Monad.Eff (Eff())
 
@@ -14,4 +13,4 @@ foreign import retweetImpl :: forall eff. Fn2 TwitterClient TweetId (Eff (twitte
 retweet :: forall eff. TwitterClient ->
                        TweetId ->
                        Eff (twitter :: TWITTER | eff) Unit
-retweet = runFn2 retweetImpl
+retweet client tweetId = runFn2 retweetImpl client tweetId

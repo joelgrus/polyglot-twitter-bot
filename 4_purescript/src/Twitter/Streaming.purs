@@ -1,7 +1,6 @@
 module Twitter.Streaming where
 
 import Prelude (Unit())
-import Data.Foreign (Foreign())
 import Data.Function
 import Control.Monad.Eff (Eff())
 
